@@ -1,6 +1,19 @@
 import React from "react";
-import { HelloWorld } from "./components/HelloWorld/HelloWorld";
+import { BrowserRouter } from "react-router-dom";
+
+import Header from "./components/Header/Header";
 
 export const App = (): JSX.Element => {
-  return <HelloWorld />;
+  return (
+    <BrowserRouter>
+      <Header
+        items={[
+          {
+            label: "ONLINE-SHOP",
+            key: "ONLINE-SHOP",
+          },
+        ]}
+      />
+    </BrowserRouter>
+  );
 };
