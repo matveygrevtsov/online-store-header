@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { FC, useMemo } from "react";
 import { Button, Flex, Menu } from "antd";
 import { LogoutOutlined } from "@ant-design/icons";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ interface HeaderProps {
   onLogout?: () => void;
 }
 
-const Header = ({ items, onLogout }: HeaderProps) => {
+const Header: FC<HeaderProps> = ({ items, onLogout }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
